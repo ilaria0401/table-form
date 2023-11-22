@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   title = 'table-form';
   dettaglioUtente:any
   @ViewChild ('modalDettaglio')modalDettaglio!:ElementRef;
+  @ViewChild ('modaleInserimento') modaleInserimento!:ElementRef;
 
 utenti =[
   {
@@ -55,5 +56,9 @@ constructor(private fb:FormBuilder,private modalService:NgbModal){
     this.dettaglioUtente=utente
     this.modalService.open(this.modalDettaglio, {size: 'lg' })
 
+  }
+
+  apriModalInserimento(){
+    this.modalService.open(this.modaleInserimento, {size: 'lg' })
   }
 }

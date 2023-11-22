@@ -1,6 +1,7 @@
 <h1 class="text-success">TABLE FORM</h1>
 
 <h4 class="mt-5">TABELLA UTENTI</h4>
+<button class="btn btn-success" (click)="apriModalInserimento()">Vedi dettaglio</button>
 <table>
   <tr>
     <th>NOME</th>
@@ -47,3 +48,9 @@
 
   </div>
 </ng-template> 
+
+<ng-template #modaleInserimento>
+  <div class="modal-header">
+    <h5>NUOVO UTENTE</h5>
+  </div>
+</ng-template>
