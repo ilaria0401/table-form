@@ -72,4 +72,24 @@ constructor(private fb:FormBuilder,private modalService:NgbModal){
   apriModalInserimento(){
     this.modalService.open(this.modaleInserimento, {size: 'lg' })
   }
-}
+
+ salvaNuovoUtente(){
+  console.log(this.FormSearch);
+  this.utenti.push(
+    {
+    nome:this.FormSearch.value.nome,
+    cognome:this.FormSearch.value.cognome,
+    anni:this.FormSearch.value.anni,
+    citta:this.FormSearch.value.citta,
+    coloreCapelli:this.FormSearch.value.coloreCapelli,
+    codiceFiscale:this.FormSearch.value.codiceFiscale
+
+  }
+    
+
+  )
+  
+  }
+ }
+    
+  

@@ -53,11 +53,19 @@
   <div class="modal-header">
     <h5>NUOVO UTENTE</h5>
   </div>
+  <div class="modal-body">
+    <form [formGroup]="FormSearch">
+      <input class="mt-3 me-3" type="text" placeholder="NOME" formControlName="nome">
+      <input class="mt-3 me-3" type="text" placeholder="COGNOME" formControlName="cognome">
+      <input class="mt-3 me-3" type="text" placeholder="CITTA'" formControlName="citta">
+      <input class="mt-3 me-3" type="text" placeholder="ANNI'" formControlName="anni">
+      <input class="mt-3 me-3" type="text" placeholder="COLORE DI CAPELLI" formControlName="coloreCapelli">
+      <input class="mt-3 me-3" type="text" placeholder="CODICE FISCALE" formControlName="codiceFiscale">
+      
+    </form>
+  </div>
+
+  <button class="btn btn-success" (click)="salvaNuovoUtente()">SALVA NUOVO UTENTE</button>
   
-    <input class="mt-3" type="text" placeholder="NOME" formControlname = "nome">
-    <input class="mt-3" type="text" placeholder="COGNOME" formControlname = "cognome">
-    <input class="mt-3" type="text" placeholder="CITTA'" formControlname = "citta">
-    <input class="mt-3" type="text" placeholder="COLORE DI CAPELLI" formControlname = "coloreCapelli">
-    <input class="mt-3" type="text" placeholder="CODICE FISCALE" formControlname = "codiceFiscale">
    
 </ng-template>
