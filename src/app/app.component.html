@@ -1,0 +1,49 @@
+<h1 class="text-success">TABLE FORM</h1>
+
+<h4 class="mt-5">TABELLA UTENTI</h4>
+<table>
+  <tr>
+    <th>NOME</th>
+    <th>COGNOME</th>
+    <th>ANNI</th>
+    <th>AZIONI</th>
+  </tr>
+  <tr *ngFor="let ut of utenti">
+    <td>{{ut.nome}}</td>
+    <td>{{ut.cognome}}</td>
+    <td>{{ut.anni}}</td>
+    <td>
+      <button class="btn btn-success" (click)="apriDettaglioUtente(ut)">Vedi dettaglio</button>
+    </td>
+  </tr>
+</table>
+
+<ng-template #modalDettaglio>
+  <div class="modal-header">
+    <h5>Dettaglio utente</h5>
+  </div>
+
+  <div class="modal-body">
+    <ul>
+      <li>
+        <STRong>NOME: </STRong>{{dettaglioUtente.nome}}
+      </li>
+      <li>
+        <STRong>COGNOME: </STRong>{{dettaglioUtente.cognome}}
+      </li>
+      <li>
+        <STRong>ANNI': </STRong>{{dettaglioUtente.anni}}
+      </li>
+      <li>
+        <STRong>CITTA': </STRong>{{dettaglioUtente.citta}}
+      </li>
+      <li>
+        <STRong>COLORE CAPELLI: </STRong>{{dettaglioUtente.coloreCapelli}}
+      </li>
+      <li>
+        <STRong>CODICE FISCALE: </STRong>{{dettaglioUtente.codiceFiscale}}
+      </li>
+    </ul>
+
+  </div>
+</ng-template>
