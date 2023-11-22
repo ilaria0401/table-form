@@ -90,6 +90,12 @@ constructor(private fb:FormBuilder,private modalService:NgbModal){
   )
   
   }
+  
+salvaDati(){
+  console.log(this.FormSearch);
+  
+}
+
  }
     
   
