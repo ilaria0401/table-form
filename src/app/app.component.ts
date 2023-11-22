@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder,FormControl,FormGroup,} from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   dettaglioUtente:any
   @ViewChild ('modalDettaglio')modalDettaglio!:ElementRef;
   @ViewChild ('modaleInserimento') modaleInserimento!:ElementRef;
+  FormSearch:FormGroup;
 
 utenti =[
   {
@@ -45,6 +46,16 @@ utenti =[
 
 
 constructor(private fb:FormBuilder,private modalService:NgbModal){
+  this.FormSearch =this.fb.group({
+    nome : new FormControl (''),
+    cognome : new FormControl (''),
+    anni : new FormControl (''),
+    citta : new FormControl (''),
+    coloreCapelli : new FormControl (''),
+    codiceFiscale : new FormControl (''),
+
+
+  })
 
 }
 

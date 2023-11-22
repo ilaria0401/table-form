@@ -1,7 +1,7 @@
 <h1 class="text-success">TABLE FORM</h1>
 
 <h4 class="mt-5">TABELLA UTENTI</h4>
-<button class="btn btn-success" (click)="apriModalInserimento()">NUOVO UTENTE</button>
+<button class="btn btn-primary" (click)="apriModalInserimento()">NUOVO UTENTE</button>
 <table>
   <tr>
     <th>NOME</th>
@@ -53,4 +53,11 @@
   <div class="modal-header">
     <h5>NUOVO UTENTE</h5>
   </div>
+  
+    <input class="mt-3" type="text" placeholder="NOME" formControlname = "nome">
+    <input class="mt-3" type="text" placeholder="COGNOME" formControlname = "cognome">
+    <input class="mt-3" type="text" placeholder="CITTA'" formControlname = "citta">
+    <input class="mt-3" type="text" placeholder="COLORE DI CAPELLI" formControlname = "coloreCapelli">
+    <input class="mt-3" type="text" placeholder="CODICE FISCALE" formControlname = "codiceFiscale">
+   
 </ng-template>
